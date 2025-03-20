@@ -1,0 +1,1 @@
+export const DOMAIN = "https://api-euro.alzero1store.com/api";

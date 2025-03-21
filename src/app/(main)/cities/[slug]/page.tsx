@@ -6,7 +6,7 @@ import { MdOutlineGridView } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa";
 import { getCityDetails } from "@/services/cities";
-import { Category, Course } from "@/types/types";
+import { Course } from "@/types/types";
 import { useRouter } from "next/navigation";
 
 interface PageProps {

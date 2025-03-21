@@ -12,22 +12,18 @@ import { useRouter } from "next/navigation";
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
-interface CityDetails {
-  categories: Category[];
-  courses: Course[];
-}
 export default function Page({ params }: PageProps) {
   const router = useRouter();
   const { slug } = use(params);
   const [view, setView] = useState<"card" | "list">("card");
-  const [cityCategories, setCityCategories] = useState<Category[]>([]);
+  // const [cityCategories, setCityCategories] = useState([]);
   const [cityCourses, setCityCourses] = useState<Course[]>([]);
-  console.log(cityCourses);
+  // console.log(cityCourses);
   useEffect(() => {
     const fetchCity = async () => {
       try {
-        const data: CityDetails = await getCityDetails(slug);
-        setCityCategories(data?.categories ?? []);
+        const data = await getCityDetails(slug);
+        // setCityCategories(data?.categories);
         setCityCourses(data?.courses ?? []);
       } catch (error) {
         console.log(error);
@@ -77,9 +73,9 @@ export default function Page({ params }: PageProps) {
         </p>
       </div>
       <div className="w-[88%] mx-auto">
-        {view === "card" && <CardView items={cityCategories} />}
+        {view === "card" && <CardView items={cityCourses} />}
 
-        {view === "list" && <ListView items={cityCategories} />}
+        {view === "list" && <ListView items={cityCourses} />}
       </div>
     </div>
   );

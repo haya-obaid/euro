@@ -33,10 +33,14 @@ export interface Course {
   course: {
     title: string;
   };
+  title: string;
   date_from: string;
   date_to: string;
   location: string;
   duration: string;
+}
+export interface CoursesProps {
+  items: Course[];
 }
 export interface Timing {
   id: string;

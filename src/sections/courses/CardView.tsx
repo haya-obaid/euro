@@ -1,9 +1,9 @@
 import Image from "next/image";
 import c1 from "../../assets/city-1.jpg";
-import { CategoriesProps } from "@/types/types";
+import { CoursesProps } from "@/types/types";
 import Link from "next/link";
 
-export const CardView = ({ items }: CategoriesProps) => {
+export const CardView = ({ items }: CoursesProps) => {
   return (
     <div className="w-full mt-8  mx-auto md:w-[98%] flex justify-center md:justify-start flex-wrap   gap-[33px]">
       {items.map((item) => (

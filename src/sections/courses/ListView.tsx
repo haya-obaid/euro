@@ -1,7 +1,8 @@
-import { CategoriesProps } from "@/types/types";
+import { CoursesProps } from "@/types/types";
 import Link from "next/link";
 
-export const ListView = ({ items }: CategoriesProps) => {
+export const ListView = ({ items }: CoursesProps) => {
+  console.log(items)
   return (
     <div className="flex flex-col gap-4 my-8">
       {items.map((item) => (

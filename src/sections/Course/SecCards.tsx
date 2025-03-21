@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import c1 from "../../assets/card-course-1.jpg";
 import c2 from "../../assets/card-course-2.jpg";
 import c3 from "../../assets/card-course-3.jpg";
@@ -73,7 +73,6 @@ export const SecCards: React.FC<SecCardsProps> = ({ title }) => {
 };
 
 export const CourseCard: React.FC<Course> = ({
-  image,
   course,
   date_from,
   date_to,

@@ -34,7 +34,7 @@ export const HeaderIndex = () => {
   const [date, setDate] = useState<string>("");
   const [venue, setVenue] = useState<string>("");
   const [duration, setDuration] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults] = useState([]);
 
   const categories = ["Python", "React", "JavaScript", "Data Science"];
   const dates = ["23-2-2025", "23-3-2025", "23-4-2025"];
